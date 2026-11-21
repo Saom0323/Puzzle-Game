@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordCraft - Word Scramble Challenge</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="game-card">
+    <header class="header">
+      <h1 class="title">WORDCRAFT ARCADE</h1>
+      
+      <!-- Stats Bar: Level, Gems, Score & Best Level -->
+      <div class="stats-bar">
+        <div class="stat-box">
+          <span class="label">LEVEL</span>
+          <span id="levelDisplay" class="value highlight">1/10</span>
+        </div>
+        <div class="stat-box">
+          <span class="label">GEMS</span>
+          <span id="gemsDisplay" class="value gem-text">💎 0</span>
+        </div>
+        <div class="stat-box">
+          <span class="label">SCORE</span>
+          <span id="scoreDisplay" class="value">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="label">BEST LEVEL</span>
+          <span id="bestLevelDisplay" class="value gold-text">1/10</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <!-- Stage & Timer Bar -->
+      <div class="status-header">
+        <span id="difficultyBadge" class="badge easy">STAGE 1 (+10 PTS)</span>
+        <div class="timer-box">
+          ⏱️ <span id="timerDisplay">30s</span>
+        </div>
+      </div>
+
+      <!-- Scrambled Word Display -->
+      <div class="word-display" id="scrambledWord">______</div>
+
+      <!-- Hint Box -->
+      <div class="hint-box">
+        💡 <span id="hintText">Loading word...</span>
+      </div>
+
+      <!-- Input Field -->
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="userInput" 
+          placeholder="Type your answer..." 
+          autocomplete="off" 
+          spellcheck="false"
+          maxlength="20"
+        >
+      </div>
+
+      <!-- Feedback Message -->
+      <div id="feedback" class="feedback"></div>
+
+      <!-- Action Button -->
+      <div class="action-buttons">
+        <button id="submitBtn" class="btn btn-primary">Submit Answer</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
